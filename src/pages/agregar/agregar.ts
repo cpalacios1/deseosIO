@@ -15,7 +15,9 @@ export class AgregarComponent implements OnInit {
 
   constructor(public _alertCtrl: AlertController, public _navCtrl: NavController, public _listaDeseosService: ListaDeseosService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log("Iniciando AgregarComponent ");
+  }
 
   agregar(){
     if (this.nombreItem.length == 0){
@@ -40,7 +42,8 @@ export class AgregarComponent implements OnInit {
     let lista = new Lista(this.nombreLista);
     lista.items = this.items;
 
-    this._listaDeseosService.listas.push(lista);
+    // this._listaDeseosService.listas.push(lista);
+    this._listaDeseosService.agregarLista(lista);
     this._navCtrl.pop();
   }
 

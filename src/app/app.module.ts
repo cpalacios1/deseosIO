@@ -1,3 +1,4 @@
+import { PendientesPipe } from './pipes/pendientes.pipe';
 import { PlaceholderPipe } from './pipes/placeholder.pipe';
 import { TerminadosComponent } from './../pages/terminados/terminados';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -15,6 +16,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesComponent } from './../pages/pendientes/pendientes';
 import { AgregarComponent } from './../pages/agregar/agregar';
+import { DetalleComponent } from "../pages/detalle/detalle";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,7 +31,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent,
-    PlaceholderPipe
+    PlaceholderPipe,
+    DetalleComponent,
+    PendientesPipe
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     PendientesComponent,
     TerminadosComponent,
-    AgregarComponent
+    AgregarComponent,
+    DetalleComponent
   ],
   providers: [
     StatusBar,
